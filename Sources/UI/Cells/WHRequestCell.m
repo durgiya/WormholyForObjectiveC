@@ -20,9 +20,7 @@
     self.methodLabel.text = request.method.uppercaseString;
     self.codeLabel.hidden = request.code == 0 ? YES : NO;
     self.codeLabel.text = request.code != 0 ? [NSString stringWithFormat:@"%zd", request.code] : @"-";
-    
-    NSLog(@"self.codeLabel.text = %@", self.codeLabel.text);
-    
+        
     UIColor *color = [WHColors HTTPCodeGeneric];
     if (request.code >= 200 && request.code < 300) {
         color = WHColors.HTTPCodeSuccess;
